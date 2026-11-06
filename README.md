@@ -5,7 +5,7 @@ Objectif : entraîner un modèle capable d’estimer le risque de diabète à pa
 
 ## 🔍 Données
 
-- Jeu de données : Pima Indians Diabetes Dataset (UCI) *(ou préciser la source exacte que tu utilises)*.
+- Jeu de données : Pima Indians Diabetes Dataset (UCI).
 - Variables : nombre de grossesses, glycémie, pression artérielle, épaisseur cutanée, insuline, IMC, âge, etc.
 - Problème : classification binaire (diabétique / non diabétique) avec classes déséquilibrées.
 
@@ -48,6 +48,12 @@ Objectif : entraîner un modèle capable d’estimer le risque de diabète à pa
    - évaluer les performances,
    - lancer l’interface Gradio.
 
+## ⚠️ Limites et pistes d’amélioration
+
+- **SMOTE** rééquilibre les classes mais fausse la calibration des probabilités prédites.
+- **Jeu Pima** : effectif réduit (768 observations).
+- **Pistes** : pondération des classes à la place de SMOTE, puis calibration du modèle (`CalibratedClassifierCV`).
+
 ## 👤 Auteur
 
-Projet développé par **Leith**, étudiant en pharmacie, intéressé par l’IA appliquée à la santé.
+Projet développé par **Leith Chqoubi**, pharmacien et étudiant en M1 Data Science en Santé à l’Université de Lille.
